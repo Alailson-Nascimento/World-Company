@@ -1,55 +1,84 @@
-WORLD COMPANY
-=========================================
+# World Company
 
-Estrutura page / model / service, cobrindo só o que a Avaliação
-Parcial 2 (aula 16) pede, sem excesso.
+Sistema de agência de viagens com área de cliente e ERP administrativo, desenvolvido em Angular com arquitetura page / model / service. Projeto da Avaliação Parcial 2 (aula 16).
 
-O QUE TEM:
+## Tecnologias
 
-- Main page (Home) com pacotes de viagem, cada um levando pra uma
-  página dedicada
-- Página dedicada: FAQ (accordion), cardápio, formulário de reserva
-  com cálculo de preço e bloqueio de datas conflitantes
-- ERP com 3 setores: Alimentação, Funcionários, Operação (luz/água/
-  internet) — cobre os exemplos citados no PDF
-- Dashboard do gerente com totais consolidados (pacotes, reservas,
-  receita, gastos, saldo)
-- Navegação entre visão cliente (Home) e visão ERP (Dashboard)
-- CSS básico já incluso (grid simples, cores, sem enfeite demais)
+- Angular (standalone components + signals)
+- HttpClient consumindo API REST (json-server)
+- Chart.js (gráfico de gastos no dashboard)
+- Faker.js (dados fictícios de funcionários e setores, em português)
+- SCSS puro (sem Angular Material)
 
-COMO USAR:
+## O que tem
 
-1. Rode os comandos do zero (ng new, ng add material, provideHttpClient,
-   npm install faker, criar pastas) — conforme o passo a passo que te
-   passei no chat
-2. Copie os arquivos deste zip para os mesmos caminhos dentro de
-   src/app/ do seu projeto
-3. Coloque o generate-db.js na raiz do projeto e rode:
-   node generate-db.js
-4. Suba o json-server:
-   npx json-server --watch db.json --port 3000
-5. Em outro terminal:
-   ng serve
+**Área do cliente**
+- Home com pacotes de viagem para 6 destinos reais (Paris, Rio de Janeiro, Santorini, Tóquio, Cusco, Bali), cada um com foto, descrição e preço por dia
+- Página dedicada por pacote: FAQ em accordion, cardápio do restaurante (quando houver), formulário de reserva com cálculo automático de preço e bloqueio de datas já reservadas
 
-ESTRUTURA:
+**Área do ERP (gerente)**
+- Dashboard com totais consolidados (pacotes cadastrados, reservas, receita, gastos por setor, saldo) e gráfico de barras comparando gastos entre setores
+- 3 setores com listagem de gastos: Alimentação, Funcionários, Operação (luz, água, internet)
+- Navegação por menu hambúrguer responsivo entre Dashboard e os 3 setores
+
+**Geral**
+- Identidade visual própria (paleta verde-petróleo + dourado, tipografia serifada + sans-serif)
+- Totalmente responsivo (mobile, tablet, desktop)
+- Testes unitários (`ng test`) e lint (`ng lint`) configurados
+
+## Como rodar o projeto
+
+### 1. Instalar as dependências
+```bash
+npm install
+```
+
+### 2. Gerar o banco de dados fictício
+```bash
+node generate-db.js
+```
+Isso cria o arquivo `db.json` na raiz do projeto.
+
+### 3. Subir a API fake (em um terminal)
+```bash
+npx json-server --watch db.json --port 3000
+```
+
+### 4. Rodar o Angular (em outro terminal)
+```bash
+ng serve
+```
+
+Acesse `http://localhost:4200`
+
+## Estrutura do projeto
+
+```
 src/app/
-├── models/ (pacote, reserva, setor, funcionario)
-├── services/ (pacote, reserva, erp/alimentacao, erp/funcionarios, erp/operacao)
+├── models/              → Pacote, Reserva, Setor, Funcionario
+├── services/
+│   ├── pacote.ts
+│   ├── reserva.ts
+│   └── erp/
+│       ├── alimentacao.ts
+│       ├── funcionarios.ts
+│       └── operacao.ts
 ├── pages/
-│ ├── home/
-│ ├── pacote-detalhe/
-│ └── erp/
-│ ├── dashboard/
-│ ├── alimentacao/
-│ ├── funcionarios/
-│ └── operacao/
+│   ├── home/
+│   ├── pacote-detalhe/
+│   └── erp/
+│       ├── dashboard/
+│       ├── alimentacao/
+│       ├── funcionarios/
+│       └── operacao/
 └── app.routes.ts
+```
 
-O QUE NÃO TEM (de propósito, pra manter simples):
+## Comandos úteis
 
-- Carousel de verdade (a Home já lista os pacotes em grid, o que
-  cumpre a exigência; se quiser um carousel de verdade depois,
-  dá pra evoluir)
-- Manutenção e Marketing como setores separados (o PDF fala em
-  "alguns exemplos", 3 setores bem feitos já atendem)
-- Testes automatizados
+```bash
+ng lint          # checa qualidade do código
+ng test          # roda os testes unitários
+ng build         # gera o build de produção
+npx prettier --write .   # formata todos os arquivos
+```
