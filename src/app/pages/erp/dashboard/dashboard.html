@@ -1,0 +1,55 @@
+<nav class="navbar">
+  <a routerLink="/erp/dashboard" class="marca">World Company ERP</a>
+
+  <button class="botao-menu" (click)="menuAberto.set(!menuAberto())" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="links-navbar" [class.aberto]="menuAberto()">
+    <a routerLink="/erp/dashboard" (click)="menuAberto.set(false)">Dashboard</a>
+    <a routerLink="/erp/alimentacao" (click)="menuAberto.set(false)">Alimentação</a>
+    <a routerLink="/erp/funcionarios" (click)="menuAberto.set(false)">Funcionários</a>
+    <a routerLink="/erp/operacao" (click)="menuAberto.set(false)">Operação</a>
+    <a routerLink="/" (click)="menuAberto.set(false)" class="botao-voltar">Voltar ao site</a>
+  </div>
+</nav>
+
+<h1>Dashboard - World Company</h1>
+
+@if (loading()) {
+  <p>Carregando dados...</p>
+} @else {
+  <div class="cards-resumo">
+    <div class="card">
+      <span>Pacotes cadastrados</span>
+      <strong>{{ totalPacotes() }}</strong>
+    </div>
+
+    <div class="card">
+      <span>Reservas feitas</span>
+      <strong>{{ totalReservas() }}</strong>
+    </div>
+
+    <div class="card">
+      <span>Receita com reservas</span>
+      <strong>R$ {{ receitaReservas() }}</strong>
+    </div>
+
+    <div class="card">
+      <span>Total de gastos (todos os setores)</span>
+      <strong>R$ {{ totalGastos() }}</strong>
+    </div>
+
+    <div class="card" [class.negativo]="saldo() < 0">
+      <span>Saldo (receita - gastos)</span>
+      <strong>R$ {{ saldo() }}</strong>
+    </div>
+  </div>
+
+  <div class="grafico-container">
+    <h2>Gastos por setor</h2>
+    <canvas #graficoGastos></canvas>
+  </div>
+}

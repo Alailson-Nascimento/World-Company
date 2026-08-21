@@ -1,0 +1,223 @@
+{
+  "pacotes": [
+    {
+      "id": 1,
+      "destino": "Paris, França",
+      "descricao": "Conheça a Torre Eiffel, o Museu do Louvre e as charmosas ruas de Montmartre nessa experiência inesquecível pela capital francesa.",
+      "precoPorDia": 650,
+      "imagemUrl": "https://loremflickr.com/800/600/paris,eiffel",
+      "temRestaurante": true,
+      "cardapio": "Culinária francesa autêntica com croissants, queijos finos e vinhos selecionados.",
+      "faq": [
+        {
+          "pergunta": "Posso cancelar a reserva?",
+          "resposta": "Sim, cancelamentos com até 7 dias de antecedência têm reembolso integral."
+        },
+        {
+          "pergunta": "Inclui café da manhã?",
+          "resposta": "Sim, servido diariamente das 7h às 10h30."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "destino": "Rio de Janeiro, Brasil",
+      "descricao": "Praias paradisíacas, o Cristo Redentor e a vibrante cultura carioca esperam por você numa das cidades mais icônicas do mundo.",
+      "precoPorDia": 420,
+      "imagemUrl": "https://loremflickr.com/800/600/riodejaneiro,beach",
+      "temRestaurante": true,
+      "cardapio": "Feijoada completa, churrasco brasileiro e frutos do mar frescos.",
+      "faq": [
+        {
+          "pergunta": "Posso cancelar a reserva?",
+          "resposta": "Cancelamentos são permitidos com até 48 horas de antecedência."
+        },
+        {
+          "pergunta": "Inclui café da manhã?",
+          "resposta": "O café da manhã é opcional e pode ser adicionado à reserva."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "destino": "Santorini, Grécia",
+      "descricao": "Casinhas brancas com cúpulas azuis, pôr do sol espetacular e águas cristalinas num dos destinos mais fotografados do Mediterrâneo.",
+      "precoPorDia": 780,
+      "imagemUrl": "https://loremflickr.com/800/600/santorini,greece",
+      "temRestaurante": false,
+      "cardapio": "Culinária mediterrânea com frutos do mar, azeite extra virgem e queijos locais.",
+      "faq": [
+        {
+          "pergunta": "Posso cancelar a reserva?",
+          "resposta": "Sim, basta entrar em contato com nossa central de atendimento."
+        },
+        {
+          "pergunta": "Inclui café da manhã?",
+          "resposta": "Sim, o café da manhã está incluso em todas as diárias."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "destino": "Tóquio, Japão",
+      "descricao": "Tradição milenar encontra tecnologia de ponta nas ruas movimentadas de uma das metrópoles mais fascinantes da Ásia.",
+      "precoPorDia": 590,
+      "imagemUrl": "https://loremflickr.com/800/600/tokyo,japan",
+      "temRestaurante": true,
+      "cardapio": "Culinária japonesa autêntica, incluindo sushi, ramen e pratos tradicionais.",
+      "faq": [
+        {
+          "pergunta": "Posso cancelar a reserva?",
+          "resposta": "Sim, cancelamentos com até 7 dias de antecedência têm reembolso integral."
+        },
+        {
+          "pergunta": "Inclui café da manhã?",
+          "resposta": "Sim, servido diariamente das 7h às 10h30."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "destino": "Cusco, Peru",
+      "descricao": "Porta de entrada para Machu Picchu, com rica história inca, arquitetura colonial e paisagens andinas de tirar o fôlego.",
+      "precoPorDia": 340,
+      "imagemUrl": "https://loremflickr.com/800/600/cusco,peru",
+      "temRestaurante": false,
+      "cardapio": "Culinária peruana com pratos típicos andinos e ingredientes locais.",
+      "faq": [
+        {
+          "pergunta": "Posso cancelar a reserva?",
+          "resposta": "Cancelamentos são permitidos com até 48 horas de antecedência."
+        },
+        {
+          "pergunta": "Inclui café da manhã?",
+          "resposta": "O café da manhã é opcional e pode ser adicionado à reserva."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "destino": "Bali, Indonésia",
+      "descricao": "Templos milenares, praias tropicais e terraços de arroz verdejantes num paraíso perfeito para relaxar e se reconectar.",
+      "precoPorDia": 380,
+      "imagemUrl": "https://loremflickr.com/800/600/bali,temple",
+      "temRestaurante": true,
+      "cardapio": "Culinária indonésia com pratos apimentados, frutas tropicais e frutos do mar.",
+      "faq": [
+        {
+          "pergunta": "Posso cancelar a reserva?",
+          "resposta": "Sim, basta entrar em contato com nossa central de atendimento."
+        },
+        {
+          "pergunta": "Inclui café da manhã?",
+          "resposta": "Sim, o café da manhã está incluso em todas as diárias."
+        }
+      ]
+    }
+  ],
+  "reservas": [],
+  "funcionarios": [
+    {
+      "id": 1,
+      "nome": "Sra. Laura Albuquerque",
+      "cargo": "Principal Segurança Atentende",
+      "salario": 6475
+    },
+    {
+      "id": 2,
+      "nome": "Nataniel Albuquerque",
+      "cargo": "Distrito Programa Facilitador",
+      "salario": 6889
+    },
+    {
+      "id": 3,
+      "nome": "Dr. João Miguel Santos",
+      "cargo": "International Otimização Orquestrador",
+      "salario": 4829
+    },
+    {
+      "id": 4,
+      "nome": "Alícia Batista",
+      "cargo": "Direto Comunicações Arquiteto",
+      "salario": 6932
+    },
+    {
+      "id": 5,
+      "nome": "Sílvia Moraes",
+      "cargo": "Senior Usabilidade Associado",
+      "salario": 1887
+    }
+  ],
+  "setores": [
+    {
+      "id": 1,
+      "descricao": "Conta de água do estabelecimento",
+      "categoria": "agua",
+      "valor": 802,
+      "data": "2026-07-20"
+    },
+    {
+      "id": 2,
+      "descricao": "Reposição de estoque da cozinha",
+      "categoria": "ingredientes",
+      "valor": 1827,
+      "data": "2026-07-31"
+    },
+    {
+      "id": 3,
+      "descricao": "Fatura de energia elétrica",
+      "categoria": "luz",
+      "valor": 50,
+      "data": "2026-07-31"
+    },
+    {
+      "id": 4,
+      "descricao": "Fatura de energia elétrica",
+      "categoria": "luz",
+      "valor": 1198,
+      "data": "2026-07-10"
+    },
+    {
+      "id": 5,
+      "descricao": "Fatura de saneamento e água",
+      "categoria": "agua",
+      "valor": 1177,
+      "data": "2026-07-18"
+    },
+    {
+      "id": 6,
+      "descricao": "Reposição de estoque da cozinha",
+      "categoria": "ingredientes",
+      "valor": 662,
+      "data": "2026-06-26"
+    },
+    {
+      "id": 7,
+      "descricao": "Fatura de energia elétrica",
+      "categoria": "luz",
+      "valor": 1922,
+      "data": "2026-08-03"
+    },
+    {
+      "id": 8,
+      "descricao": "Fatura de energia elétrica",
+      "categoria": "luz",
+      "valor": 1628,
+      "data": "2026-07-20"
+    },
+    {
+      "id": 9,
+      "descricao": "Reposição de estoque da cozinha",
+      "categoria": "ingredientes",
+      "valor": 1909,
+      "data": "2026-06-28"
+    },
+    {
+      "id": 10,
+      "descricao": "Fatura de internet e telefonia",
+      "categoria": "internet",
+      "valor": 1366,
+      "data": "2026-08-20"
+    }
+  ]
+}

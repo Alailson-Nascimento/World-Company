@@ -1,0 +1,71 @@
+<a routerLink="/">← Voltar</a>
+
+@if (loading()) {
+  <p>Carregando pacote...</p>
+} @else if (erro()) {
+  <p>Erro ao carregar o pacote. Tente novamente.</p>
+} @else if (pacote()) {
+  <div class="detalhe-pacote">
+    <h2>{{ pacote()!.destino }}</h2>
+    <img [src]="pacote()!.imagemUrl" [alt]="pacote()!.destino" />
+
+    <p>{{ pacote()!.descricao }}</p>
+    <strong>R$ {{ pacote()!.precoPorDia }} / dia</strong>
+
+    @if (pacote()!.temRestaurante) {
+      <div class="restaurante">
+        <h3>Restaurante próprio</h3>
+        <p>{{ pacote()!.cardapio }}</p>
+      </div>
+    }
+
+    <div class="faq">
+      <h3>Perguntas frequentes</h3>
+      @for (item of pacote()!.faq; track item.pergunta) {
+        <details>
+          <summary>{{ item.pergunta }}</summary>
+          <p>{{ item.resposta }}</p>
+        </details>
+      }
+    </div>
+
+    <div class="formulario-reserva">
+      <h3>Fazer reserva</h3>
+
+      <label>
+        Nome completo
+        <input
+          type="text"
+          [value]="nomeCliente()"
+          (input)="nomeCliente.set($any($event.target).value)"
+        />
+      </label>
+
+      <label>
+        Data início
+        <input
+          type="date"
+          [value]="dataInicio()"
+          (input)="dataInicio.set($any($event.target).value)"
+        />
+      </label>
+
+      <label>
+        Data fim
+        <input type="date" [value]="dataFim()" (input)="dataFim.set($any($event.target).value)" />
+      </label>
+
+      @if (valorTotal() > 0) {
+        <p>
+          Valor total estimado: <strong>R$ {{ valorTotal() }}</strong>
+        </p>
+      }
+
+      <button (click)="confirmarReserva()">Reservar</button>
+
+      @if (mensagemReserva()) {
+        <p class="mensagem">{{ mensagemReserva() }}</p>
+      }
+    </div>
+  </div>
+}

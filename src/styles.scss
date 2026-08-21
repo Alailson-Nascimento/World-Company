@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --cor-primaria: #0b3d3e;
+  --cor-primaria-clara: #145c5e;
+  --cor-destaque: #e8a33d;
+  --cor-fundo: #faf9f6;
+  --cor-texto: #16231f;
+  --cor-texto-suave: #5c6b67;
+  --cor-borda: #e2e0d8;
+  --sombra: 0 8px 24px rgba(11, 61, 62, 0.08);
+  --raio: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Fraunces', serif;
+}

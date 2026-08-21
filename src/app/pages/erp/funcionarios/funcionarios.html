@@ -1,0 +1,48 @@
+<nav class="navbar">
+  <a routerLink="/erp/dashboard" class="marca">World Company ERP</a>
+
+  <button class="botao-menu" (click)="menuAberto.set(!menuAberto())" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="links-navbar" [class.aberto]="menuAberto()">
+    <a routerLink="/erp/dashboard" (click)="menuAberto.set(false)">Dashboard</a>
+    <a routerLink="/erp/alimentacao" (click)="menuAberto.set(false)">Alimentação</a>
+    <a routerLink="/erp/funcionarios" (click)="menuAberto.set(false)">Funcionários</a>
+    <a routerLink="/erp/operacao" (click)="menuAberto.set(false)">Operação</a>
+    <a routerLink="/" (click)="menuAberto.set(false)" class="botao-voltar">Voltar ao site</a>
+  </div>
+</nav>
+
+@if (loading()) {
+  <p>Carregando gastos...</p>
+} @else if (erro()) {
+  <p>Erro ao carregar os gastos.</p>
+} @else {
+  <h2>Funcionários</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Salário</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (f of funcionarios(); track f.id) {
+        <tr>
+          <td>{{ f.nome }}</td>
+          <td>{{ f.cargo }}</td>
+          <td>R$ {{ f.salario }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <p>
+    Total em salários: <strong>R$ {{ totalSalarios() }}</strong>
+  </p>
+}

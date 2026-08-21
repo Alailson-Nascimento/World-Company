@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <a routerLink="/">World Company</a>
+  <a routerLink="/erp/dashboard">Área ERP</a>
+</nav>
+
+<h1>Nossos pacotes de viagem</h1>
+
+@if (loading()) {
+  <p>Carregando pacotes...</p>
+} @else if (erro()) {
+  <p>Erro ao carregar os pacotes. Tente novamente.</p>
+} @else {
+  <div class="lista-pacotes">
+    @for (pacote of pacotes(); track pacote.id) {
+      <a [routerLink]="['/pacote', pacote.id]" class="card-pacote">
+        <img [src]="pacote.imagemUrl" [alt]="pacote.destino" />
+        <h3>{{ pacote.destino }}</h3>
+        <p>{{ pacote.descricao }}</p>
+        <strong>R$ {{ pacote.precoPorDia }} / dia</strong>
+      </a>
+    }
+  </div>
+}
