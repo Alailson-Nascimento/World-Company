@@ -13,15 +13,18 @@ Sistema de agência de viagens com área de cliente e ERP administrativo, desenv
 ## O que tem
 
 **Área do cliente**
+
 - Home com pacotes de viagem para 6 destinos reais (Paris, Rio de Janeiro, Santorini, Tóquio, Cusco, Bali), cada um com foto, descrição e preço por dia
 - Página dedicada por pacote: FAQ em accordion, cardápio do restaurante (quando houver), formulário de reserva com cálculo automático de preço e bloqueio de datas já reservadas
 
 **Área do ERP (gerente)**
+
 - Dashboard com totais consolidados (pacotes cadastrados, reservas, receita, gastos por setor, saldo) e gráfico de barras comparando gastos entre setores
 - 3 setores com listagem de gastos: Alimentação, Funcionários, Operação (luz, água, internet)
 - Navegação por menu hambúrguer responsivo entre Dashboard e os 3 setores
 
 **Geral**
+
 - Identidade visual própria (paleta verde-petróleo + dourado, tipografia serifada + sans-serif)
 - Totalmente responsivo (mobile, tablet, desktop)
 - Testes unitários (`ng test`) e lint (`ng lint`) configurados
@@ -29,22 +32,27 @@ Sistema de agência de viagens com área de cliente e ERP administrativo, desenv
 ## Como rodar o projeto
 
 ### 1. Instalar as dependências
+
 ```bash
 npm install
 ```
 
 ### 2. Gerar o banco de dados fictício
+
 ```bash
 node generate-db.js
 ```
+
 Isso cria o arquivo `db.json` na raiz do projeto.
 
 ### 3. Subir a API fake (em um terminal)
+
 ```bash
 npx json-server --watch db.json --port 3000
 ```
 
 ### 4. Rodar o Angular (em outro terminal)
+
 ```bash
 ng serve
 ```

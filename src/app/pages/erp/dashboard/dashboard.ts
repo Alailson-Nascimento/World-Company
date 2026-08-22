@@ -1,17 +1,22 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, inject, signal, computed, viewChild, ElementRef, effect } from '@angular/core';
+
 import { RouterLink } from '@angular/router';
+
 import { Chart } from 'chart.js/auto';
+
 import { PacoteService } from '../../../services/pacote';
 import { ReservaService } from '../../../services/reserva';
 import { AlimentacaoService } from '../../../services/erp/alimentacao';
 import { FuncionariosService } from '../../../services/erp/funcionarios';
 import { OperacaoService } from '../../../services/erp/operacao';
+
 import { Pacote } from '../../../models/pacote';
 import { Reserva } from '../../../models/reserva';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterLink],
+  imports: [RouterLink, CurrencyPipe],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })

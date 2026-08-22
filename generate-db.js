@@ -10,13 +10,11 @@ const pacotes = [
     precoPorDia: 650,
     imagemUrl: '/imagens/pacotes/paris.jpg',
     temRestaurante: true,
-    cardapio:
-      'Culinária francesa autêntica com croissants, queijos finos e vinhos selecionados.',
+    cardapio: 'Culinária francesa autêntica com croissants, queijos finos e vinhos selecionados.',
     faq: [
       {
         pergunta: 'Posso cancelar a reserva?',
-        resposta:
-          'Sim, cancelamentos com até 7 dias de antecedência têm reembolso integral.',
+        resposta: 'Sim, cancelamentos com até 7 dias de antecedência têm reembolso integral.',
       },
       {
         pergunta: 'Inclui café da manhã?',
@@ -32,18 +30,15 @@ const pacotes = [
     precoPorDia: 420,
     imagemUrl: '/imagens/pacotes/rio.jpg',
     temRestaurante: true,
-    cardapio:
-      'Feijoada completa, churrasco brasileiro e frutos do mar frescos.',
+    cardapio: 'Feijoada completa, churrasco brasileiro e frutos do mar frescos.',
     faq: [
       {
         pergunta: 'Posso cancelar a reserva?',
-        resposta:
-          'Cancelamentos são permitidos com até 48 horas de antecedência.',
+        resposta: 'Cancelamentos são permitidos com até 48 horas de antecedência.',
       },
       {
         pergunta: 'Inclui café da manhã?',
-        resposta:
-          'O café da manhã é opcional e pode ser adicionado à reserva.',
+        resposta: 'O café da manhã é opcional e pode ser adicionado à reserva.',
       },
     ],
   },
@@ -55,18 +50,15 @@ const pacotes = [
     precoPorDia: 780,
     imagemUrl: '/imagens/pacotes/santorini.jpg',
     temRestaurante: false,
-    cardapio:
-      'Culinária mediterrânea com frutos do mar, azeite extra virgem e queijos locais.',
+    cardapio: 'Culinária mediterrânea com frutos do mar, azeite extra virgem e queijos locais.',
     faq: [
       {
         pergunta: 'Posso cancelar a reserva?',
-        resposta:
-          'Sim, basta entrar em contato com nossa central de atendimento.',
+        resposta: 'Sim, basta entrar em contato com nossa central de atendimento.',
       },
       {
         pergunta: 'Inclui café da manhã?',
-        resposta:
-          'Sim, o café da manhã está incluso em todas as diárias.',
+        resposta: 'Sim, o café da manhã está incluso em todas as diárias.',
       },
     ],
   },
@@ -78,13 +70,11 @@ const pacotes = [
     precoPorDia: 590,
     imagemUrl: '/imagens/pacotes/tokyo.jpg',
     temRestaurante: true,
-    cardapio:
-      'Culinária japonesa autêntica, incluindo sushi, ramen e pratos tradicionais.',
+    cardapio: 'Culinária japonesa autêntica, incluindo sushi, ramen e pratos tradicionais.',
     faq: [
       {
         pergunta: 'Posso cancelar a reserva?',
-        resposta:
-          'Sim, cancelamentos com até 7 dias de antecedência têm reembolso integral.',
+        resposta: 'Sim, cancelamentos com até 7 dias de antecedência têm reembolso integral.',
       },
       {
         pergunta: 'Inclui café da manhã?',
@@ -100,18 +90,15 @@ const pacotes = [
     precoPorDia: 340,
     imagemUrl: '/imagens/pacotes/cusco.jpg',
     temRestaurante: false,
-    cardapio:
-      'Culinária peruana com pratos típicos andinos e ingredientes locais.',
+    cardapio: 'Culinária peruana com pratos típicos andinos e ingredientes locais.',
     faq: [
       {
         pergunta: 'Posso cancelar a reserva?',
-        resposta:
-          'Cancelamentos são permitidos com até 48 horas de antecedência.',
+        resposta: 'Cancelamentos são permitidos com até 48 horas de antecedência.',
       },
       {
         pergunta: 'Inclui café da manhã?',
-        resposta:
-          'O café da manhã é opcional e pode ser adicionado à reserva.',
+        resposta: 'O café da manhã é opcional e pode ser adicionado à reserva.',
       },
     ],
   },
@@ -123,18 +110,15 @@ const pacotes = [
     precoPorDia: 380,
     imagemUrl: '/imagens/pacotes/bali.jpg',
     temRestaurante: true,
-    cardapio:
-      'Culinária indonésia com pratos apimentados, frutas tropicais e frutos do mar.',
+    cardapio: 'Culinária indonésia com pratos apimentados, frutas tropicais e frutos do mar.',
     faq: [
       {
         pergunta: 'Posso cancelar a reserva?',
-        resposta:
-          'Sim, basta entrar em contato com nossa central de atendimento.',
+        resposta: 'Sim, basta entrar em contato com nossa central de atendimento.',
       },
       {
         pergunta: 'Inclui café da manhã?',
-        resposta:
-          'Sim, o café da manhã está incluso em todas as diárias.',
+        resposta: 'Sim, o café da manhã está incluso em todas as diárias.',
       },
     ],
   },
