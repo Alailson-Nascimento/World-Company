@@ -1,34 +1,18 @@
-import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
-import { faker } from '@faker-js/faker';
-
+import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
 import { Setor } from '../../models/setor';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AlimentacaoService {
-  private readonly gastos: Setor[] = Array.from({ length: 6 }, (_, index) => ({
-    id: index + 1,
-    descricao: faker.food.dish(),
-    categoria: 'ingredientes',
-    valor: Number(
-      faker.finance.amount({
-        min: 200,
-        max: 2000,
-        dec: 2,
-      }),
-    ),
-    data: faker.date
-      .between({
-        from: '2026-01-01',
-        to: '2026-08-21',
-      })
-      .toISOString()
-      .split('T')[0],
-  }));
+  private readonly http = inject(HttpClient);
+  private readonly url = '/data/setores.json';
 
   getGastos() {
-    return of(this.gastos);
+    return this.http
+      .get<Setor[]>(this.url)
+      .pipe(map((setores) => setores.filter((s) => s.categoria === 'ingredientes')));
   }
 }

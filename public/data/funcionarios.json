@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nome": "Laura Albuquerque", "cargo": "Atendente de Segurança", "salario": 6475 },
+  { "id": 2, "nome": "Nataniel Albuquerque", "cargo": "Facilitador de Programa", "salario": 6889 },
+  { "id": 3, "nome": "João Miguel Santos", "cargo": "Orquestrador de Otimização", "salario": 4829 },
+  { "id": 4, "nome": "Alícia Batista", "cargo": "Arquiteta de Comunicações", "salario": 6932 },
+  { "id": 5, "nome": "Sílvia Moraes", "cargo": "Associada de Usabilidade", "salario": 1887 }
+]

@@ -1,22 +1,37 @@
 <nav class="navbar">
   <a routerLink="/erp/dashboard" class="marca">World Company ERP</a>
 
-  <button class="botao-menu" (click)="menuAberto.set(!menuAberto())" aria-label="Abrir menu">
+  <button
+    class="botao-menu"
+    [class.aberto]="menuAberto()"
+    (click)="menuAberto.set(!menuAberto())"
+    aria-label="Abrir menu"
+  >
     <span></span>
     <span></span>
     <span></span>
   </button>
 
   <div class="links-navbar" [class.aberto]="menuAberto()">
-    <a routerLink="/erp/dashboard" (click)="menuAberto.set(false)"> Dashboard </a>
+    <a routerLink="/erp/dashboard" (click)="menuAberto.set(false)">
+      Dashboard
+    </a>
 
-    <a routerLink="/erp/alimentacao" (click)="menuAberto.set(false)"> Alimentação </a>
+    <a routerLink="/erp/alimentacao" (click)="menuAberto.set(false)">
+      Alimentação
+    </a>
 
-    <a routerLink="/erp/funcionarios" (click)="menuAberto.set(false)"> Funcionários </a>
+    <a routerLink="/erp/funcionarios" (click)="menuAberto.set(false)">
+      Funcionários
+    </a>
 
-    <a routerLink="/erp/operacao" (click)="menuAberto.set(false)"> Operação </a>
+    <a routerLink="/erp/operacao" (click)="menuAberto.set(false)">
+      Operação
+    </a>
 
-    <a routerLink="/" (click)="menuAberto.set(false)" class="botao-voltar"> Voltar ao site </a>
+    <a routerLink="/" (click)="menuAberto.set(false)" class="botao-voltar">
+      Voltar ao site
+    </a>
   </div>
 </nav>
 
@@ -38,17 +53,23 @@
 
     <div class="card">
       <span>Receita com reservas</span>
-      <strong>{{ receitaReservas() | currency: 'BRL' }}</strong>
+      <strong>
+        {{ receitaReservas() | currency: 'BRL': 'symbol': '1.2-2': 'pt-BR' }}
+      </strong>
     </div>
 
     <div class="card">
       <span>Total de gastos (todos os setores)</span>
-      <strong>{{ totalGastos() | currency: 'BRL' }}</strong>
+      <strong>
+        {{ totalGastos() | currency: 'BRL': 'symbol': '1.2-2': 'pt-BR' }}
+      </strong>
     </div>
 
     <div class="card" [class.negativo]="saldo() < 0">
       <span>Saldo (receita - gastos)</span>
-      <strong>{{ saldo() | currency: 'BRL' }}</strong>
+      <strong>
+        {{ saldo() | currency: 'BRL': 'symbol': '1.2-2': 'pt-BR' }}
+      </strong>
     </div>
   </div>
 
