@@ -28,24 +28,19 @@ table {
     padding: 14px 20px;
     text-align: left;
   }
-
-  th {
-    background: var(--cor-primaria);
-    color: white;
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-  }
-
   tbody tr {
     transition: background 0.15s ease;
 
     &:hover td {
       background: #eef0e9;
     }
+  }
 
-    &:active td {
-      background: #e4e7dc;
-    }
+  th {
+    background: var(--cor-primaria);
+    color: white;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
   }
 
   tr:nth-child(even) td {
@@ -66,7 +61,6 @@ p:last-of-type {
     border-radius: 999px;
   }
 }
-
 .navbar {
   display: flex;
   align-items: center;
@@ -85,35 +79,18 @@ p:last-of-type {
   .botao-menu {
     display: none;
     flex-direction: column;
-    justify-content: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 8px;
-    width: 40px;
-    height: 40px;
 
     span {
       width: 24px;
       height: 2px;
       background: white;
       border-radius: 2px;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-    }
-
-    &.aberto span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-    &.aberto span:nth-child(2) {
-      opacity: 0;
-    }
-    &.aberto span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    &:active {
-      transform: scale(0.9);
+      transition: transform 0.2s ease;
     }
   }
 
@@ -132,10 +109,6 @@ p:last-of-type {
       &:hover {
         opacity: 1;
       }
-
-      &:active {
-        opacity: 0.6;
-      }
     }
 
     .botao-voltar {
@@ -145,17 +118,13 @@ p:last-of-type {
       border-radius: 999px;
       font-size: 0.85rem;
       opacity: 1;
-
-      &:active {
-        transform: scale(0.95);
-      }
     }
   }
 }
 
 @media (max-width: 700px) {
   .navbar {
-    padding: 14px 20px;
+    padding: 16px 20px;
 
     .botao-menu {
       display: flex;
@@ -174,14 +143,13 @@ p:last-of-type {
       gap: 4px;
       box-shadow: var(--sombra);
       animation: deslizarBaixo 0.2s ease;
-      z-index: 10;
 
       &.aberto {
         display: flex;
       }
 
       a {
-        padding: 12px 0;
+        padding: 10px 0;
         text-align: center;
       }
 
