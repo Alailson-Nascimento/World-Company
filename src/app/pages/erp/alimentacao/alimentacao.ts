@@ -16,9 +16,11 @@ export class Alimentacao {
   protected readonly loading = signal(false);
   protected readonly erro = signal(false);
   protected readonly menuAberto = signal(false);
-  protected readonly totalGasto = computed(() =>
-    this.gastos().reduce((soma, item) => soma + item.valor, 0),
-  );
+
+  protected readonly totalGasto = computed(() => {
+    const soma = this.gastos().reduce((acc, item) => acc + item.valor, 0);
+    return Math.round(soma * 100) / 100;
+  });
 
   constructor() {
     this.carregarGastos();

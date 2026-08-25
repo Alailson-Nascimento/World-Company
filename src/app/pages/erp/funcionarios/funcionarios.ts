@@ -16,9 +16,11 @@ export class Funcionarios {
   protected readonly loading = signal(false);
   protected readonly erro = signal(false);
   protected readonly menuAberto = signal(false);
-  protected readonly totalSalarios = computed(() =>
-    this.funcionarios().reduce((soma, f) => soma + f.salario, 0),
-  );
+
+  protected readonly totalSalarios = computed(() => {
+    const soma = this.funcionarios().reduce((acc, f) => acc + f.salario, 0);
+    return Math.round(soma * 100) / 100; // ✅ arredonda para 2 casas
+  });
 
   constructor() {
     this.carregarFuncionarios();
